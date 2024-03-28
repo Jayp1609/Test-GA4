@@ -1,5 +1,6 @@
 "use client";
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
+import GoogleTagManager from "./components/GoogleTagManager";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
@@ -12,7 +13,6 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="/style.css" />
       </head>
-
       <body className={inter.className}>
         <main>{children}</main>
         <GoogleTagManager gtmId="GTM-NDQHW6GD" />

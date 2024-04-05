@@ -4,7 +4,7 @@ pipeline {
     // Define tools to be used in this Pipeline
     tools {
         // Define the NodeJS tool called 'nodejs'
-        nodejs "nodejs"
+        nodejs 'nodejs'
     }
     
     stages {

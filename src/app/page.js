@@ -15,13 +15,14 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div>Fetch Data</div>
+      <div id="comments-container"></div>
       <button
         // onClick={() => {
         //   sendGTMEvent({ event: "buttonClicked", value: "xyz" });
         // }}
         onClick={handleClick}
       >
-        Click Here for google event
+        Click Here for google eventsssssss
       </button>
       <Link href="productlist">Go to productlist</Link>
       <Link href="productserver">Go to productlist server</Link>

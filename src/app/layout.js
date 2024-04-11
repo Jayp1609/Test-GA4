@@ -1,21 +1,50 @@
-"use client";
-// import { GoogleTagManager } from "@next/third-parties/google";
-import GoogleTagManager from "./components/GoogleTagManager";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Head from "next/head";
-
-const inter = Inter({ subsets: ["latin"] });
+// import Head from "next/head";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <link rel="stylesheet" href="/style.css" />
-      </head>
-      <body className={inter.className}>
+      </Head>
+      <body>
         <main>{children}</main>
-        <GoogleTagManager  />
+        <div id="comments-container"></div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+           
+              function fetchComments() {
+                  fetch(\`https://testing-plugin.onrender.com/api/comments\`)
+                      .then(handleResponse)
+                      .then(renderComments)
+                      .catch(handleError);
+              }
+              function handleResponse(response) {
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  return response.json();
+              }
+              function renderComments(comments) {
+                  const commentsContainer = document.getElementById('comments-container');
+                  commentsContainer.innerHTML = ''; // Clear existing comments
+
+                  comments.forEach(comment => {
+                      const commentElement = document.createElement('div');
+                      commentElement.innerHTML = \`
+                          <p><strong>\${comment.author}</strong>: \${comment.text}</p>
+                          <p>Posted on \${comment.date}</p>
+                      \`;
+                      commentsContainer.appendChild(commentElement);
+                  });
+              } 
+              function handleError(error) {
+                  console.error('Error fetching comments:', error);
+              }
+              fetchComments(); 
+            `,
+          }}
+        ></script>
       </body>
     </html>
   );

@@ -3,11 +3,8 @@ import React from "react";
 import Link from "next/link";
 import styles from "./page.module.css";
 //import { sendGTMEvent } from "@next/third-parties/google";
-import useGoogleAnalytics from "../../services/useGoogleAnalytics";
 
 export default function Home() {
-  const pushEventToDataLayer = useGoogleAnalytics("G-339K42BX2L");
-
   const handleClick = () => {
     pushEventToDataLayer({ event: "login" });
   };

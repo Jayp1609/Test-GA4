@@ -1,10 +1,15 @@
 import React from "react";
 import User from "../components/user";
 
-export const page = () => {
+const page = () => {
   return (
     <div>
-      <User />
+      page
+      <div>
+        <User />
+      </div>
     </div>
   );
 };
+
+export default page;

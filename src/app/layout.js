@@ -10,9 +10,9 @@ export default function RootLayout({ children }) {
         {/* <script src="https://testing-plugin.onrender.com/api/comments-script" /> */}
         <script
           dangerouslySetInnerHTML={{
-            __html: fetch(
+            __html: `fetch(
               "https://testing-plugin.onrender.com/api/comments-script"
-            ).script,
+            ).script`,
           }}
         />
       </head>

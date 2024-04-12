@@ -25,7 +25,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "https://testing-plugin.onrender.com/api/:path*",
+        source: "/api/:path*",
         destination: "https://test-ga-4.vercel.app",
       },
     ];

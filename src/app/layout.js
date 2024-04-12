@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
             __html: `
            
               function fetchComments() {
-                  fetch(\`http://testing-plugin.onrender.com/api/comments\`)
+                  fetch(\`https://testing-plugin.onrender.com/api/comments\`)
                       .then(handleResponse)
                       .then(renderComments)
                       .catch(handleError);

@@ -5,7 +5,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="stylesheet" href="/style.css" />
-        <script src="https://testing-plugin.onrender.com/api/comments-script"></script>
+        <script src="https://testing-plugin.onrender.com/api/comments-script" />
       </Head>
       <body>
         <main>{children}</main>

@@ -21,8 +21,8 @@ export default function Home() {
       >
         Click Here for google eventsssssss
       </button>
-      <Link href="productlist">Go to productlist</Link>
-      <Link href="productserver">Go to productlist server</Link>
+      {/* <Link href="productlist">Go to productlist</Link>
+      <Link href="productserver">Go to productlist server</Link> */}
     </main>
   );
 }

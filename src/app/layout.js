@@ -1,16 +1,14 @@
-import Head from "next/head";
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="stylesheet" href="/style.css" />
         <script src="https://testing-plugin.onrender.com/api/comments-script" />
-      </Head>
+      </head>
       <body>
         <main>{children}</main>
-        <div id="comments-container"></div>
-        {/* <script src="https://testing-plugin.onrender.com/api/comments-script"></script> */}
+
+        {/* <script src="https://testing-plugin.onrender.com/api/comments-script"></scrip> */}
         {/* <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -46,7 +44,7 @@ export default function RootLayout({ children }) {
               fetchComments(); 
             `,
           }}
-        ></script> */}
+        ></scrip> */}
       </body>
     </html>
   );

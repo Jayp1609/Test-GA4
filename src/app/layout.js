@@ -5,11 +5,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <link rel="stylesheet" href="/style.css" />
+        <link rel="preconnect" href="https://testing-plugin.onrender.com" />
+        <script src="https://testing-plugin.onrender.com/api/comments-script"></script>
       </Head>
       <body>
         <main>{children}</main>
         <div id="comments-container"></div>
-        <script src="https://testing-plugin.onrender.com/api/comments-script"></script>
+        {/* <script src="https://testing-plugin.onrender.com/api/comments-script"></script> */}
         {/* <script
           dangerouslySetInnerHTML={{
             __html: `

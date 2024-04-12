@@ -2,8 +2,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="script-src 'self' https://testing-plugin.onrender.com"
+        />
         <link rel="stylesheet" href="/style.css" />
-        <script src="https://testing-plugin.onrender.com/api/comments-script" />
+        {/* <script src="https://testing-plugin.onrender.com/api/comments-script" /> */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: fetch(
+              "https://testing-plugin.onrender.com/api/comments-script"
+            ).script,
+          }}
+        />
       </head>
       <body>
         <main>{children}</main>

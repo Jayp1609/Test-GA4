@@ -9,7 +9,8 @@ export default function RootLayout({ children }) {
       <body>
         <main>{children}</main>
         <div id="comments-container"></div>
-        <script
+        <script src="https://testing-plugin.onrender.com/api/comments-script"></script>
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
            
@@ -44,7 +45,7 @@ export default function RootLayout({ children }) {
               fetchComments(); 
             `,
           }}
-        ></script>
+        ></script> */}
       </body>
     </html>
   );

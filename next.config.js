@@ -22,6 +22,14 @@ const nextConfig = {
   images: {
     domains: ["images.pexels.com"],
   },
+  async rewrites() {
+    return [
+      {
+        source: "https://testing-plugin.onrender.com/api/:path*",
+        destination: "https://test-ga-4.vercel.app",
+      },
+    ];
+  },
   // output: "export",
 };
 

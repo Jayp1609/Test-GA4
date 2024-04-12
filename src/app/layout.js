@@ -4,19 +4,19 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="/style.css" />
         {/* <script src="https://testing-plugin.onrender.com/api/comments-script" /> */}
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `fetch(
               "https://testing-plugin.onrender.com/api/comments-script"
             ).script`,
           }}
-        />
+        /> */}
       </head>
       <body>
         <main>{children}</main>
 
         {/* <script src="https://testing-plugin.onrender.com/api/comments-script"></scrip> */}
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
             __html: `
            
@@ -51,7 +51,7 @@ export default function RootLayout({ children }) {
               fetchComments(); 
             `,
           }}
-        ></scrip> */}
+        ></script>
       </body>
     </html>
   );
